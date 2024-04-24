@@ -1,0 +1,700 @@
+/* Kat Weaver */
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+:root {
+    --beige: #ede9d1;
+    --lightOrange: #f89c23;
+    --orange: #dd692a;
+    --olive: #3d3a20;
+    --darkOlive: #37423d;
+    --white: #ffffff;
+    --black: #000000;
+
+    font-size: 16px;
+}
+
+/* RESET */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* GLOBAL */
+body {
+    width: 1280px;
+    margin: 0 auto;
+    background-color: var(--beige);
+    font-family: "Raleway", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+q {
+    font-style: italic;
+}
+
+q::before {
+    content: "\201C";
+}
+
+q::after {
+    content: "\201D";
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: "Rock Salt", serif;
+}
+
+/* HEADER */
+#skipLink {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#skipLink:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
+/* I couldn't a svg file for the logo :( */
+header a img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+header {
+    padding-bottom: 200px;
+}
+
+header h2 {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+h1 {
+    position: absolute;
+    top: 230px;
+    left: 350px;
+    font-size: 70px;
+}
+
+/* NAV */
+nav {
+    height: 50px;
+    background-color: var(--orange);
+}
+
+nav ul {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    padding: 0 10px;
+}
+
+nav a {
+    padding: 10px 50px;
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+nav a:hover {
+    background-color: var(--lightOrange);
+}
+
+/* LIGHT / DARK */
+/* PLACES THE BUTTON */
+#darkMode {
+    height: 100px;
+    position: absolute;
+    right: 50px;
+    top: 50px;
+}
+
+.changer {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+/* HIDES THE ORIGINAL CHECKBOX */
+.changer input {
+    display: none;
+}
+
+/* ADDS THE BACKGROUND OF THE BUTTON */
+.background {
+    background-color: var(--darkOlive);
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+/* ADDS THE SLIDING CIRCLE */
+.background:before {
+    background-color: var(--olive);
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+/* CHANGES THE BUTTON COLOR AND ADDS MOVEMENT WHEN CLICKED */
+input:checked+.background {
+    background-color: var(--orange);
+}
+
+input:checked+.background:before {
+    background-color: var(--lightOrange);
+    transform: translateX(26px);
+}
+
+/* MAKES THE SQUARES ROUNDED */
+.background.circle {
+    border-radius: 34px;
+}
+
+.background.circle:before {
+    border-radius: 50%;
+}
+
+/* SWITCH MODES */
+.dark {
+    background-color: var(--olive);
+    color: var(--white);
+
+    input[type="submit"] {
+        background-color: var(--lightOrange);
+    }
+
+    input[type="submit"]:hover {
+        background-color: var(--orange);
+    }
+}
+
+/* BACK TO TOP */
+/* PLACES THE BUTTON */
+#backToTop {
+    display: inline-block;
+    background-color: var(--lightOrange);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+#backToTop::after {
+    content: "^";
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 60px;
+    color: var(--white);
+}
+
+#backToTop:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+}
+
+/* ABOUT */
+#bio {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 50px;
+}
+
+#bio img {
+    padding: 0 50px;
+}
+
+#bio p {
+    padding: 0 50px;
+    line-height: 2;
+}
+
+#bio h3 {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* RSD */
+#rsd {
+    background-color: var(--darkOlive);
+    color: var(--white);
+}
+
+#rsd h3 {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+#rsd img {
+    display: block;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+#rsd p {
+    padding: 10px 50px;
+    text-align: center;
+    line-height: 2;
+}
+
+/* CONTEST */
+#contest {
+    text-align: center;
+}
+
+#contest label {
+    color: var(--lightOrange);
+}
+
+#contest p:nth-of-type(1) {
+    color: var(--lightOrange);
+}
+
+#contest button {
+    background-color: var(--lightOrange);
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+/* NEW RELEASES */
+#newReleases {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+    padding: 50px;
+}
+
+#newReleases div {
+    background-color: var(--orange);
+    padding: 8px;
+    margin: 40px;
+}
+
+#newReleases h3 {
+    grid-column: 1 / span 4;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+#newReleases dl {
+    padding-top: 5px;
+}
+
+#newReleases dt {
+    font-size: 16px;
+    padding-bottom: 6px;
+    font-style: italic;
+    color: var(--white);
+    font-weight: bold;
+}
+
+#newReleases dd {
+    font-size: 12px;
+    padding-bottom: 2px;
+}
+
+#newReleases a {
+    color: var(--white);
+}
+
+#newReleases a:hover {
+    text-decoration: underline;
+}
+
+/* STAFF PICKS */
+#staffPicks section {
+    background-color: var(--darkOlive);
+    color: var(--white);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+}
+
+#staffPicks h3 {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+#staffPicks ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px 0;
+    background-color: var(--darkOlive);
+}
+
+#staffPicks ul li {
+    padding: 0 80px;
+    font-size: 18px;
+    color: var(--white);
+}
+
+#staffPicks ul li:hover {
+    color: var(--lightOrange);
+    cursor: pointer;
+}
+
+#staffPicks section h4 {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+    font-size: 20px;
+    color: var(--lightOrange);
+    padding-top: 30px;
+    padding-bottom: 50px;
+    font-weight: bold;
+}
+
+#staffPicks section a {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    padding-left: 30px;
+    padding-bottom: 50px;
+}
+
+#staffPicks section q {
+    text-align: center;
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+    padding-bottom: 30px;
+}
+
+#staffPicks section dl {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
+
+#staffPicks section dt,
+#staffPicks section dd:first-of-type {
+    color: var(--lightOrange);
+}
+
+#staffPicks section dd:first-of-type {
+    padding-bottom: 6px;
+}
+
+#staffPicks section dd {
+    font-size: 14px;
+}
+
+#staffPicks section dt span {
+    font-style: italic;
+    font-weight: bold;
+}
+
+#staffPicks section dd span {
+    font-weight: bold;
+}
+
+#staffPicks section ol {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    line-height: 2;
+    padding-bottom: 50px;
+}
+
+#staffPicks section ol .color {
+    color: var(--lightOrange);
+}
+
+#staffPicks section ol .bold {
+    font-weight: bold;
+}
+
+/* PRODUCT DISPLAY */
+.hideSection {
+    visibility: hidden;
+    height: 0px;
+}
+
+/* CONTACT */
+/* FORM */
+#contact {
+    padding: 50px 0;
+}
+
+#contact h3 {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+
+form {
+    padding: 10px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+/*
+  .hide {
+    display: none;
+  }
+  */
+#formErrors {
+    color: red;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border: 1px solid var(--olive);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+}
+
+fieldset {
+    text-align: center;
+    padding: 10px 0;
+}
+
+input[type="submit"] {
+    width: 100%;
+    color: var(--white);
+    background-color: var(--olive);
+    padding: 15px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--lightOrange);
+}
+
+.error {
+    color: red;
+    display: block;
+}
+
+.errorStyle {
+    border: 2px solid red;
+
+}
+
+.errorMsg {
+    display: none;
+}
+
+.required {
+    color: red;
+    font-size: 20px;
+}
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+/* FOOTER */
+footer {
+    background-color: var(--orange);
+    padding: 30px;
+    text-align: center;
+}
+
+footer a {
+    color: var(--white);
+    line-height: 2;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer small {
+    color: var(--white);
+    font-size: 12px;
+}

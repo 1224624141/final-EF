@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Electric Fetus">
+    <meta name="author" content="Kat Weaver">
+    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo/favicon-32x32.png">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <title>Electric Fetus</title>
+</head>
+
+<body class="light">
+    <header id="top">
+        <a id="skipLink" href='#main'>Skip to main</a>
+        <a href="#"><img alt="logo" src="images/logo/logo1.jpeg" width="100" height="100"></a>
+        <h1>Electric Fetus</h1>
+        <h2>Main Navigation</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">New Releases</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Events</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <!-- LIGHT/DARK MODE -->
+        <div id="darkMode">
+            <label class="changer" for="checkbox">
+                <input type="checkbox" id="checkbox" />
+                <span class="background circle"></span>
+            </label>
+        </div>
+    </header>
+    <main id="main">
+        <a href="#top" id="backToTop"></a>
+
+        <!-- SHORT BIO -->
+        <section id="bio">
+            <h3>About</h3>
+            <img alt="a girl in a blue sweater is listening to a record with headphones on at the front counter"
+                src="images/store/ef.jpeg" width="550" height="300">
+            <p>Serving the Minnesota Twin Cities music community since 1968. National Lampoon magazine singled the store
+                out for having the worst name for a business. Be that as it may, it’s a name people don’t forget.
+                Electric Fetus sells everything you're looking for. Music of all genres and formats, including records,
+                CDs, cassettes. As well as DVDs, books, posters, clothing and trinkets.</p>
+        </section>
+        <!-- RECORD STORE DAY INFO WITH CONTEST -->
+        <section id="rsd">
+            <h3>Record Store Day</h3>
+            <img alt="gritty record store day label with black background and records replacing the letter o"
+                src="images/rsd/rsd2024.webp">
+            <p>Record Store Day, typically held once a year on the third Saturday of April, celebrates the culture of
+                the independently owned record stores. Each independent record store hosts their own events and
+                promotions, with special edition releases and sometimes even meet and greets from well respected bands
+                or musicians. Record Store Day is on April 20th, 2024.</p>
+            <!-- CONTEST -->
+            <div id="contest">
+                <p>Enter a number 1-10. If the number matches you win 20% off your Record Store Day purchase!</p>
+                <p id="random">Our Guess: </p>
+                <label for="num">Your Guess: </label>
+                <input type="number" id="num" name="num" min="1" max="10">
+                <p id="matchMessage"></p>
+                <button id="play">Play!</button>
+            </div>
+        </section>
+        <!-- NEW RELEASES GRID -->
+        <section id="newReleases">
+            <h3>New Releases</h3>
+            <div>
+                <a href="#"><img alt="a" src="images/new/pandora.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">Pandora EP</a></dt>
+                    <dd>Wisp</dd>
+                    <dd>Rock</dd>
+                </dl>
+            </div>
+            <div>
+                <a href="#"><img alt="a" src="images/new/vial.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">burnout</a></dt>
+                    <dd>VIAL</dd>
+                    <dd>Rock</dd>
+                </dl>
+            </div>
+            <div>
+                <a href="#"><img alt="a" src="images/new/metro.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">WE STILL DON'T TRUST YOU</a></dt>
+                    <dd>Future / Metro Boomin</dd>
+                    <dd>Rap</dd>
+                </dl>
+            </div>
+            <div>
+                <a href="#"><img alt="a" src="images/new/tyla.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">Tyla</a></dt>
+                    <dd>Tyla</dd>
+                    <dd>Pop/R&B</dd>
+                </dl>
+            </div>
+            <div>
+                <a href="#"><img alt="a" src="images/new/adam.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">Eleven Fugues for Sodium Pentothal</a></dt>
+                    <dd>Adam Wiltzie</dd>
+                    <dd>Experimental</dd>
+                </dl>
+            </div>
+            <div>
+                <a href="#"><img alt="a" src="images/new/bkth.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">LVL5 P2</a></dt>
+                    <dd>Bktherula</dd>
+                    <dd>Rap</dd>
+                </dl>
+            </div>
+            <div>
+                <a href="#"><img alt="a" src="images/new/jmc.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">Glasgow Eyes</a></dt>
+                    <dd>The Jesus and Mary Chain</dd>
+                    <dd>Rock</dd>
+                </dl>
+            </div>
+            <div>
+                <a href="#"><img alt="a" src="images/new/mount.webp" width="200" height="200"></a>
+                <dl>
+                    <dt><a href="#">The Sunset Violent</a></dt>
+                    <dd>Mount Kimbie</dd>
+                    <dd>Electronic</dd>
+                </dl>
+            </div>
+        </section>
+        <!-- STAFF PICKS DISPLAY -->
+        <section id="staffPicks">
+            <h3>Staff Picks</h3>
+            <ul>
+                <li class="pick1">Lily</li>
+                <li class="pick2">Tim</li>
+                <li class="pick3">Beth</li>
+                <li class="pick4">Lucas</li>
+                <li class="pick5">Joey</li>
+                <li class="pick6">Sean</li>
+            </ul>
+            <div>
+                <section id="lily">
+                    <h4>Lily's Pick</h4>
+                    <a href="#"><img alt="a" src="images/staff/portishead.webp" width="400" height="400"></a>
+                    <q>This groovy, gloomy downtempo album is perfect for late night drives.</q>
+                    <dl>
+                        <dt><span>Dummy</span> (1994)</dt>
+                        <dd><span>Portishead</span></dd>
+                        <dd>Electronic</dd>
+                    </dl>
+                    <ol>
+                        <li><span class="bold">Mysterons:</span> <span class="color">5:05</span></li>
+                        <li><span class="bold">Sour Times:</span> <span class="color">4:12</span></li>
+                        <li><span class="bold">Strangers:</span> <span class="color">3:57</span></li>
+                        <li><span class="bold">It Could Be Sweet:</span> <span class="color">4:17</span></li>
+                        <li><span class="bold">Wandering Star:</span> <span class="color">4:53</span></li>
+                        <li><span class="bold">It's a Fire:</span> <span class="color">3:46</span></li>
+                        <li><span class="bold">Numb:</span> <span class="color">3:55</span></li>
+                        <li><span class="bold">Roads:</span> <span class="color">5:03</span></li>
+                        <li><span class="bold">Pedestal:</span> <span class="color">3:40</span></li>
+                        <li><span class="bold">Biscuit:</span> <span class="color">5:02</span></li>
+                        <li><span class="bold">Glory Box:</span> <span class="color">5:08</span></li>
+                    </ol>
+                </section>
+                <section id="tim" class="hideSection">
+                    <h4>Tim's Pick</h4>
+                    <a href="#"><img alt="a" src="images/staff/cure.webp" width="400" height="400"></a>
+                    <q>An oldie but a goodie, maybe The Cure's most influential album.</q>
+                    <dl>
+                        <dt><span>Disintegration</span> (1989)</dt>
+                        <dd><span>The Cure</span></dd>
+                        <dd>Rock</dd>
+                    </dl>
+                    <ol>
+                        <li><span class="bold">Plainsong:</span> <span class="color">5:17</span></li>
+                        <li><span class="bold">Pictures of You:</span> <span class="color">7:28</span></li>
+                        <li><span class="bold">Closedown:</span> <span class="color">4:18</span></li>
+                        <li><span class="bold">Lovesong:</span> <span class="color">3:29</span></li>
+                        <li><span class="bold">Last Dance:</span> <span class="color">4:45</span></li>
+                        <li><span class="bold">Lullaby:</span> <span class="color">4:09</span></li>
+                        <li><span class="bold">Fascination Street:</span> <span class="color">5:16</span></li>
+                        <li><span class="bold">Prayers for Rain:</span> <span class="color">6:08</span></li>
+                        <li><span class="bold">The Same Deep Water as You:</span> <span class="color">9:22</span></li>
+                        <li><span class="bold">Disintegration:</span> <span class="color">8:19</span></li>
+                        <li><span class="bold">Homesick:</span> <span class="color">7:07</span></li>
+                        <li><span class="bold">Untitled:</span> <span class="color">6:33</span></li>
+                    </ol>
+                </section>
+                <section id="beth" class="hideSection">
+                    <h4>Beth's Pick</h4>
+                    <a href="#"><img alt="a" src="images/staff/jimmy.webp" width="400" height="400"></a>
+                    <q>Clarity is a perfect record: perfectly written; perfectly performed; perfectly produced.</q>
+                    <dl>
+                        <dt><span>Clarity</span> (1998)</dt>
+                        <dd><span>Jimmy Eat World</span></dd>
+                        <dd>Rock</dd>
+                    </dl>
+                    <ol>
+                        <li><span class="bold">Table For Glasses:</span> <span class="color">4:22</span></li>
+                        <li><span class="bold">Lucky Denver Mint:</span> <span class="color">3:49</span></li>
+                        <li><span class="bold">Your New Aesthetic:</span> <span class="color">2:40</span></li>
+                        <li><span class="bold">Believe In What You Want:</span> <span class="color">3:08</span></li>
+                        <li><span class="bold">A Sunday:</span> <span class="color">4:32</span></li>
+                        <li><span class="bold">Crush:</span> <span class="color">3:11</span></li>
+                        <li><span class="bold">12.23.95:</span> <span class="color">3:43</span></li>
+                        <li><span class="bold">Ten:</span> <span class="color">3:48</span></li>
+                        <li><span class="bold">Just Watch The Fireworks:</span> <span class="color">7:02</span></li>
+                        <li><span class="bold">For Me This Is Heaven:</span> <span class="color">4:06</span></li>
+                        <li><span class="bold">Blister:</span> <span class="color">3:29</span></li>
+                        <li><span class="bold">Clarity:</span> <span class="color">4:02</span></li>
+                        <li><span class="bold">Goodbye Sky Harbor:</span> <span class="color">16:13</span></li>
+                        <li><span class="bold">Christmas Card:</span> <span class="color">2:53</span></li>
+                        <li><span class="bold">Sweetness:</span> <span class="color">3:38</span></li>
+                    </ol>
+                </section>
+                <section id="lucas" class="hideSection">
+                    <h4>Lucas's Pick</h4>
+                    <a href="#"><img alt="a" src="images/staff/gza.webp" width="400" height="400"></a>
+                    <q>Arguably the greatest rap album of all time.</q>
+                    <dl>
+                        <dt><span>Liquid Swords</span> (1995)</dt>
+                        <dd><span>GZA</span></dd>
+                        <dd>Rap</dd>
+                    </dl>
+                    <ol>
+                        <li><span class="bold">Liquid Swords:</span> <span class="color">4:30</span></li>
+                        <li><span class="bold">Duel Of The Iron Mic:</span> <span class="color">4:06</span></li>
+                        <li><span class="bold">Living In The World Today:</span> <span class="color">4:23</span></li>
+                        <li><span class="bold">Gold:</span> <span class="color">3:57</span></li>
+                        <li><span class="bold">Cold World:</span> <span class="color">5:31</span></li>
+                        <li><span class="bold">Labels:</span> <span class="color">2:54</span></li>
+                        <li><span class="bold">4th Chamber:</span> <span class="color">4:36</span></li>
+                        <li><span class="bold">Shadowboxin':</span> <span class="color">3:29</span></li>
+                        <li><span class="bold">Hell's Wind Staff/Killah Hills 10304:</span> <span
+                                class="color">5:08</span></li>
+                        <li><span class="bold">Investigative Reports:</span> <span class="color">3:49</span></li>
+                        <li><span class="bold">Swordsman:</span> <span class="color">3:21</span></li>
+                        <li><span class="bold">I Gotcha Back:</span> <span class="color">5:01</span></li>
+                        <li><span class="bold">B.I.B.L.E.:</span> <span class="color">4:32</span></li>
+                    </ol>
+                </section>
+                <section id="joey" class="hideSection">
+                    <h4>Joey's Pick</h4>
+                    <a href="#"><img alt="a" src="images/staff/limp.jpeg" width="400" height="400"></a>
+                    <q>Limp Bizkit, you either love 'em or you hate 'em.</q>
+                    <dl>
+                        <dt><span>Chocolate Starfish And The Hotdog Flavored Water</span> (2000)</dt>
+                        <dd><span>Limp Bizkit</span></dd>
+                        <dd>Rock</dd>
+                    </dl>
+                    <ol>
+                        <li><span class="bold">Intro:</span> <span class="color">1:18</span></li>
+                        <li><span class="bold">Hot Dog:</span> <span class="color">3:50</span></li>
+                        <li><span class="bold">My Generation:</span> <span class="color">3:41</span></li>
+                        <li><span class="bold">Full Nelson:</span> <span class="color">4:07</span></li>
+                        <li><span class="bold">My Way:</span> <span class="color">4:32</span></li>
+                        <li><span class="bold">Rollin' (Air Raid Vehicle):</span> <span class="color">3:33</span></li>
+                        <li><span class="bold">Livin' It Up:</span> <span class="color">4:24</span></li>
+                        <li><span class="bold">The One:</span> <span class="color">5:43</span></li>
+                        <li><span class="bold">Getcha Groove On:</span> <span class="color">4:19</span></li>
+                        <li><span class="bold">Take A Look Around:</span> <span class="color">5:21</span></li>
+                        <li><span class="bold">It'll Be OK:</span> <span class="color">5:06</span></li>
+                        <li><span class="bold">Boiler:</span> <span class="color">7:00</span></li>
+                        <li><span class="bold">Hold On:</span> <span class="color">5:47</span></li>
+                        <li><span class="bold">Rollin' (Urban Assault Vehicle):</span> <span class="color">6:22</span>
+                        </li>
+                        <li><span class="bold">Outro:</span> <span class="color">9:49</span></li>
+                    </ol>
+                </section>
+                <section id="sean" class="hideSection">
+                    <h4>Sean's Pick</h4>
+                    <a href="#"><img alt="a" src="images/staff/rage.webp" width="400" height="400"></a>
+                    <q>Zack de la Rocha has unbelievable passion in his vocals and his lyrics.</q>
+                    <dl>
+                        <dt><span>Rage Against The Machine</span> (1992)</dt>
+                        <dd><span>Rage Against The Machine</span></dd>
+                        <dd>Rock</dd>
+                    </dl>
+                    <ol>
+                        <li><span class="bold">Bombtrack:</span> <span class="color">4:03</span></li>
+                        <li><span class="bold">Killing In The Name:</span> <span class="color">5:13</span></li>
+                        <li><span class="bold">Take the Power Back:</span> <span class="color">5:35</span></li>
+                        <li><span class="bold">Settle for Nothing:</span> <span class="color">4:47</span></li>
+                        <li><span class="bold">Bullet In the Head:</span> <span class="color">5:07</span></li>
+                        <li><span class="bold">Know Your Enemy:</span> <span class="color">4:54</span></li>
+                        <li><span class="bold">Wake Up:</span> <span class="color">6:04</span></li>
+                        <li><span class="bold">Fistful of Steel:</span> <span class="color">5:31</span></li>
+                        <li><span class="bold">Township Rebellion:</span> <span class="color">5:24</span></li>
+                        <li><span class="bold">Freedom:</span> <span class="color">6:06</span></li>
+                    </ol>
+                </section>
+            </div>
+        </section>
+        <!-- CONTACT FORM -->
+        <section id="contact">
+            <h3>Contact Us</h3>
+            <form id="validate">
+                <label for="name">Full Name<span class="required">*</span></label>
+                <span class="errorMsg"><br>Please enter full name</span>
+                <input type="text" name="name" id="name" required>
+
+                <label for="email">Email</label>
+                <span class="errorMsg"><br>Please enter email address</span>
+                <input type="email" name="email" id="email">
+
+                <label for="phone">Phone</label>
+                <span class="errorMsg"><br>Please enter phone number</span>
+                <input type="tel" id="phone" name="phone">
+
+                <fieldset>
+                    <legend>Preferred Contact Method<span class="required">*</span></legend>
+                    <span class="errorMsg"><br>Please enter preferred contact method</span>
+
+                    <input type="radio" name="pref" id="phoneP" checked>
+                    <label for="phoneP">Phone</label>
+
+                    <input type="radio" name="pref" id="emailP">
+                    <label for="emailP">Email</label>
+                </fieldset>
+
+                <label for="comments">Comments<span class="required">*</span></label>
+                <span class="errorMsg"><br>Please enter comments</span>
+                <textarea id="comments" name="comments"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+            <section id="valid" class="hide">
+                <p>Thank you for submitting your comments. Here is what you said: </p>
+                <p id="formResponses"></p>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <p><a href="#">Terms of Service</a></p>
+        <p><a href="#">Privacy Policy</a></p>
+        <small>Copyright 2024</small>
+    </footer>
+</body>
+
+</html>
