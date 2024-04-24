@@ -95,9 +95,9 @@ function validateForm(e) {
     let isValid = true;
 
     // reset form errors before validating
-    form.name.classList.remove("errorStyle");
-    form.email.classList.remove("errorStyle");
-    form.phone.classList.remove("errorStyle");
+    form.fullName.classList.remove("errorStyle");
+    form.emailAddress.classList.remove("errorStyle");
+    form.phoneNum.classList.remove("errorStyle");
     form.comments.classList.remove("errorStyle");
     errorSpans.forEach(function (span) {
         span.classList.remove("error");
@@ -109,23 +109,23 @@ function validateForm(e) {
     let phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
 
     // check name
-    if (form.name.value === "" || !nameRegex.test(form.name.value)) {
-        form.name.classList.add("errorStyle");
+    if (form.fullName.value === "" || !nameRegex.test(form.fullName.value)) {
+        form.fullName.classList.add("errorStyle");
         errorSpans[0].classList.add("error");
         isValid = false;
     }
     // check email
     if (form.emailP.checked) {
-        if (form.email.value === "" || !emailRegex.test(form.email.value)) {
-            form.email.classList.add("errorStyle");
+        if (form.emailAddress.value === "" || !emailRegex.test(form.emailAddress.value)) {
+            form.emailAddress.classList.add("errorStyle");
             errorSpans[1].classList.add("error");
             isValid = false;
         }
     }
     // check phone
     if (form.phoneP.checked) {
-        if (form.phone.value === "" || !phoneRegex.test(form.phone.value)) {
-            form.phone.classList.add("errorStyle");
+        if (form.phoneNum.value === "" || !phoneRegex.test(form.phoneNum.value)) {
+            form.phoneNum.classList.add("errorStyle");
             errorSpans[2].classList.add("error");
             isValid = false;
         }

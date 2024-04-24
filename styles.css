@@ -156,7 +156,7 @@ table {
 body {
     width: 1280px;
     margin: 0 auto;
-    background-color: var(--beige);
+    background-color: #ede9d1;
     font-family: "Raleway", sans-serif;
 }
 
@@ -229,7 +229,7 @@ h1 {
 /* NAV */
 nav {
     height: 50px;
-    background-color: var(--orange);
+    background-color: #dd692a;
 }
 
 nav ul {
@@ -247,11 +247,11 @@ nav ul li {
 nav a {
     padding: 10px 50px;
     text-transform: uppercase;
-    color: var(--white);
+    color: #ffffff;
 }
 
 nav a:hover {
-    background-color: var(--lightOrange);
+    background-color: #f89c23;
 }
 
 /* LIGHT / DARK */
@@ -277,7 +277,7 @@ nav a:hover {
 
 /* ADDS THE BACKGROUND OF THE BUTTON */
 .background {
-    background-color: var(--darkOlive);
+    background-color: #37423d;
     bottom: 0;
     cursor: pointer;
     left: 0;
@@ -289,7 +289,7 @@ nav a:hover {
 
 /* ADDS THE SLIDING CIRCLE */
 .background:before {
-    background-color: var(--olive);
+    background-color: #3d3a20;
     bottom: 4px;
     content: "";
     height: 26px;
@@ -301,11 +301,11 @@ nav a:hover {
 
 /* CHANGES THE BUTTON COLOR AND ADDS MOVEMENT WHEN CLICKED */
 input:checked+.background {
-    background-color: var(--orange);
+    background-color: #dd692a;
 }
 
 input:checked+.background:before {
-    background-color: var(--lightOrange);
+    background-color: #f89c23;
     transform: translateX(26px);
 }
 
@@ -320,15 +320,15 @@ input:checked+.background:before {
 
 /* SWITCH MODES */
 .dark {
-    background-color: var(--olive);
-    color: var(--white);
+    background-color: #3d3a20;
+    color: #ffffff;
 
-    input[type="submit"] {
-        background-color: var(--lightOrange);
+    & input[type="submit"] {
+        background-color: #f89c23;
     }
 
-    input[type="submit"]:hover {
-        background-color: var(--orange);
+    & input[type="submit"]:hover {
+        background-color: #dd692a;
     }
 }
 
@@ -336,7 +336,7 @@ input:checked+.background:before {
 /* PLACES THE BUTTON */
 #backToTop {
     display: inline-block;
-    background-color: var(--lightOrange);
+    background-color: #f89c23;
     width: 50px;
     height: 50px;
     text-align: center;
@@ -351,12 +351,12 @@ input:checked+.background:before {
     font-weight: bold;
     font-size: 50px;
     line-height: 60px;
-    color: var(--white);
+    color: #ffffff;
 }
 
 #backToTop:hover {
     cursor: pointer;
-    background-color: var(--orange);
+    background-color: #dd692a;
 }
 
 /* ABOUT */
@@ -386,8 +386,8 @@ input:checked+.background:before {
 
 /* RSD */
 #rsd {
-    background-color: var(--darkOlive);
-    color: var(--white);
+    background-color: #37423d;
+    color: #ffffff;
 }
 
 #rsd h3 {
@@ -417,16 +417,16 @@ input:checked+.background:before {
 }
 
 #contest label {
-    color: var(--lightOrange);
+    color: #f89c23;
 }
 
 #contest p:nth-of-type(1) {
-    color: var(--lightOrange);
+    color: #f89c23;
 }
 
 #contest button {
-    background-color: var(--lightOrange);
-    color: var(--white);
+    background-color: #f89c23;
+    color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 30px;
     border-radius: 4px;
@@ -442,7 +442,7 @@ input:checked+.background:before {
 }
 
 #newReleases div {
-    background-color: var(--orange);
+    background-color: #dd692a;
     padding: 8px;
     margin: 40px;
 }
@@ -462,7 +462,7 @@ input:checked+.background:before {
     font-size: 16px;
     padding-bottom: 6px;
     font-style: italic;
-    color: var(--white);
+    color: #ffffff;
     font-weight: bold;
 }
 
@@ -472,7 +472,7 @@ input:checked+.background:before {
 }
 
 #newReleases a {
-    color: var(--white);
+    color: #ffffff;
 }
 
 #newReleases a:hover {
@@ -481,8 +481,8 @@ input:checked+.background:before {
 
 /* STAFF PICKS */
 #staffPicks section {
-    background-color: var(--darkOlive);
-    color: var(--white);
+    background-color: #37423d;
+    color: #ffffff;
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
@@ -500,17 +500,17 @@ input:checked+.background:before {
     flex-direction: row;
     justify-content: center;
     padding: 30px 0;
-    background-color: var(--darkOlive);
+    background-color: #37423d;
 }
 
 #staffPicks ul li {
     padding: 0 80px;
     font-size: 18px;
-    color: var(--white);
+    color: #ffffff;
 }
 
 #staffPicks ul li:hover {
-    color: var(--lightOrange);
+    color: #f89c23;
     cursor: pointer;
 }
 
@@ -519,7 +519,7 @@ input:checked+.background:before {
     grid-row: 1 / 2;
     text-align: center;
     font-size: 20px;
-    color: var(--lightOrange);
+    color: #f89c23;
     padding-top: 30px;
     padding-bottom: 50px;
     font-weight: bold;
@@ -546,7 +546,7 @@ input:checked+.background:before {
 
 #staffPicks section dt,
 #staffPicks section dd:first-of-type {
-    color: var(--lightOrange);
+    color: #f89c23;
 }
 
 #staffPicks section dd:first-of-type {
@@ -574,7 +574,7 @@ input:checked+.background:before {
 }
 
 #staffPicks section ol .color {
-    color: var(--lightOrange);
+    color: #f89c23;
 }
 
 #staffPicks section ol .bold {
@@ -623,7 +623,7 @@ input[type="tel"] {
     padding: 8px;
     margin-top: 4px;
     margin-bottom: 12px;
-    border: 1px solid var(--olive);
+    border: 1px solid #3d3a20;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -639,8 +639,8 @@ fieldset {
 
 input[type="submit"] {
     width: 100%;
-    color: var(--white);
-    background-color: var(--olive);
+    color: #ffffff;
+    background-color: #3d3a20;
     padding: 15px;
     margin-top: 10px;
     text-transform: uppercase;
@@ -651,7 +651,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: var(--lightOrange);
+    background-color: #f89c23;
 }
 
 .error {
@@ -680,13 +680,13 @@ input[type="submit"]:hover {
 }
 /* FOOTER */
 footer {
-    background-color: var(--orange);
+    background-color: #dd692a;
     padding: 30px;
     text-align: center;
 }
 
 footer a {
-    color: var(--white);
+    color: #ffffff;
     line-height: 2;
 }
 
@@ -695,6 +695,6 @@ footer a:hover {
 }
 
 footer small {
-    color: var(--white);
+    color: #ffffff;
     font-size: 12px;
 }

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="description" content="Electric Fetus">
     <meta name="author" content="Kat Weaver">
-    <meta name="viewport" content="width=device width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="images/logo/favicon-32x32.png">
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
@@ -304,17 +304,17 @@
         <section id="contact">
             <h3>Contact Us</h3>
             <form id="validate">
-                <label for="name">Full Name<span class="required">*</span></label>
+                <label for="fullName">Full Name<span class="required">*</span></label>
                 <span class="errorMsg"><br>Please enter full name</span>
-                <input type="text" name="name" id="name" required>
+                <input type="text" name="fullName" id="fullName" required>
 
-                <label for="email">Email</label>
+                <label for="emailAddress">Email</label>
                 <span class="errorMsg"><br>Please enter email address</span>
-                <input type="email" name="email" id="email">
+                <input type="email" name="emailAddress" id="emailAddress">
 
-                <label for="phone">Phone</label>
+                <label for="phoneNum">Phone</label>
                 <span class="errorMsg"><br>Please enter phone number</span>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phoneNum" name="phoneNum">
 
                 <fieldset>
                     <legend>Preferred Contact Method<span class="required">*</span></legend>
@@ -333,10 +333,10 @@
 
                 <input type="submit" value="Submit">
             </form>
-            <section id="valid" class="hide">
+            <div id="valid" class="hide">
                 <p>Thank you for submitting your comments. Here is what you said: </p>
                 <p id="formResponses"></p>
-            </section>
+            </div>
         </section>
     </main>
     <footer>
