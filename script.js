@@ -104,7 +104,7 @@ function validateForm(e) {
     });
 
     // regex
-    let nameRegex = /([A-Za-z])[ ]([A-Za-z])/;
+    let nameRegex = /^[A-Za-z ]+$/;
     let emailRegex = /^[a-z0-9]+@[a-z]+\.[a-z]{2,3}$/;
     let phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
 
