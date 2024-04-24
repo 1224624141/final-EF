@@ -89,13 +89,9 @@ function validateForm(e) {
     // prevent default form submission
     e.preventDefault();
 
-    // put form into variable
+    // make variables
     let form = document.querySelector("#validate");
-
-    // put error spans into variable
     let errorSpans = document.querySelectorAll("#validate .errorMsg");
-
-    // track form validity
     let isValid = true;
 
     // reset form errors before validating
