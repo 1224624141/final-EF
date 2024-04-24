@@ -151,7 +151,7 @@ function validateForm(e) {
 		// display the user's input data (to show what they are sending to the server)
 		document.getElementById(
 			"formResponses"
-		).innerHTML = `<strong>Full Name: </strong>${form.name.value}<br><strong>Email: </strong>${form.email.value}<br><strong>Phone: </strong>${form.phone.value}<br><strong>Comments: </strong>${form.comments.value}`;
+		).innerHTML = `<strong>Full Name: </strong>${form.fullName.value}<br><strong>Email: </strong>${form.emailAddress.value}<br><strong>Phone: </strong>${form.phoneNum.value}<br><strong>Comments: </strong>${form.comments.value}`;
 
     form.reset();
 
