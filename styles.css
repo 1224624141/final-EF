@@ -289,7 +289,7 @@ nav a:hover {
 
 /* ADDS THE SLIDING CIRCLE */
 .background:before {
-    background-color: #3d3a20;
+    background-color: #524f35;
     bottom: 4px;
     content: "";
     height: 26px;
@@ -320,7 +320,7 @@ input:checked+.background:before {
 
 /* SWITCH MODES */
 .dark {
-    background-color: #3d3a20;
+    background-color: #524f35;
     color: #ffffff;
 
     & input[type="submit"] {
