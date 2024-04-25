@@ -322,14 +322,13 @@ input:checked+.background:before {
 .dark {
     background-color: #524f35;
     color: #ffffff;
+}
+.dark input[type="submit"] {
+    background-color: #f89c23;
+}
 
-    & input[type="submit"] {
-        background-color: #f89c23;
-    }
-
-    & input[type="submit"]:hover {
-        background-color: #dd692a;
-    }
+.dark input[type="submit"]:hover {
+    background-color: #dd692a;
 }
 
 /* BACK TO TOP */
