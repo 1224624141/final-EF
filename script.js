@@ -112,6 +112,7 @@ function validateForm(e) {
     if (contactForm.fullName.value === "" || !nameRegex.test(contactForm.fullName.value)) {
         contactForm.fullName.classList.add("errorStyle");
         errorSpans[0].classList.add("error");
+        errorSpans[0].classList.remove("errorMsg");
         isValid = false;
     }
     // check email
@@ -119,6 +120,7 @@ function validateForm(e) {
         if (contactForm.emailAddress.value === "" || !emailRegex.test(contactForm.emailAddress.value)) {
             contactForm.emailAddress.classList.add("errorStyle");
             errorSpans[1].classList.add("error");
+            errorSpans[1].classList.remove("errorMsg");
             isValid = false;
         }
     }
@@ -127,18 +129,21 @@ function validateForm(e) {
         if (contactForm.phoneNum.value === "" || !phoneRegex.test(contactForm.phoneNum.value)) {
             contactForm.phoneNum.classList.add("errorStyle");
             errorSpans[2].classList.add("error");
+            errorSpans[2].classList.remove("errorMsg");
             isValid = false;
         }
     }
     // check preferred contact
     if (!contactForm.emailP.checked && !contactForm.phoneP.checked) {
         errorSpans[3].classList.add("error");
+        errorSpans[3].classList.remove("errorMsg");
         isValid = false;
     }
     // check comments
     if (contactForm.comments.value === "") {
         contactForm.comments.classList.add("errorStyle");
         errorSpans[4].classList.add("error");
+        errorSpans[4].classList.remove("errorMsg");
         isValid = false;
     }
 
