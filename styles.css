@@ -655,7 +655,6 @@ input[type="submit"]:hover {
 }
 
 .error {
-    color: red;
     display: block;
 }
 
@@ -666,6 +665,7 @@ input[type="submit"]:hover {
 
 .errorMsg {
     display: none;
+    color: red;
 }
 
 .required {

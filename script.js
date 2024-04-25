@@ -90,15 +90,15 @@ function validateForm(e) {
     e.preventDefault();
 
     // make variables
-    let form = document.querySelector("#validate");
+    let contactForm = document.querySelector("#validate");
     let errorSpans = document.querySelectorAll("#validate .errorMsg");
     let isValid = true;
 
     // reset form errors before validating
-    form.fullName.classList.remove("errorStyle");
-    form.emailAddress.classList.remove("errorStyle");
-    form.phoneNum.classList.remove("errorStyle");
-    form.comments.classList.remove("errorStyle");
+    contactForm.fullName.classList.remove("errorStyle");
+    contactForm.emailAddress.classList.remove("errorStyle");
+    contactForm.phoneNum.classList.remove("errorStyle");
+    contactForm.comments.classList.remove("errorStyle");
     errorSpans.forEach(function (span) {
         span.classList.remove("error");
     });
@@ -109,35 +109,35 @@ function validateForm(e) {
     let phoneRegex = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
 
     // check name
-    if (form.fullName.value === "" || !nameRegex.test(form.fullName.value)) {
-        form.fullName.classList.add("errorStyle");
+    if (contactForm.fullName.value === "" || !nameRegex.test(contactForm.fullName.value)) {
+        contactForm.fullName.classList.add("errorStyle");
         errorSpans[0].classList.add("error");
         isValid = false;
     }
     // check email
-    if (form.emailP.checked) {
-        if (form.emailAddress.value === "" || !emailRegex.test(form.emailAddress.value)) {
-            form.emailAddress.classList.add("errorStyle");
+    if (contactForm.emailP.checked) {
+        if (contactForm.emailAddress.value === "" || !emailRegex.test(contactForm.emailAddress.value)) {
+            contactForm.emailAddress.classList.add("errorStyle");
             errorSpans[1].classList.add("error");
             isValid = false;
         }
     }
     // check phone
-    if (form.phoneP.checked) {
-        if (form.phoneNum.value === "" || !phoneRegex.test(form.phoneNum.value)) {
-            form.phoneNum.classList.add("errorStyle");
+    if (contactForm.phoneP.checked) {
+        if (contactForm.phoneNum.value === "" || !phoneRegex.test(contactForm.phoneNum.value)) {
+            contactForm.phoneNum.classList.add("errorStyle");
             errorSpans[2].classList.add("error");
             isValid = false;
         }
     }
     // check preferred contact
-    if (!form.emailP.checked && !form.phoneP.checked) {
+    if (!contactForm.emailP.checked && !contactForm.phoneP.checked) {
         errorSpans[3].classList.add("error");
         isValid = false;
     }
     // check comments
-    if (form.comments.value === "") {
-        form.comments.classList.add("errorStyle");
+    if (contactForm.comments.value === "") {
+        contactForm.comments.classList.add("errorStyle");
         errorSpans[4].classList.add("error");
         isValid = false;
     }
@@ -151,9 +151,9 @@ function validateForm(e) {
 		// display the user's input data (to show what they are sending to the server)
 		document.getElementById(
 			"formResponses"
-		).innerHTML = `<strong>Full Name: </strong>${form.fullName.value}<br><strong>Email: </strong>${form.emailAddress.value}<br><strong>Phone: </strong>${form.phoneNum.value}<br><strong>Comments: </strong>${form.comments.value}`;
+		).innerHTML = `<strong>Full Name: </strong>${contactForm.fullName.value}<br><strong>Email: </strong>${contactForm.emailAddress.value}<br><strong>Phone: </strong>${contactForm.phoneNum.value}<br><strong>Comments: </strong>${contactForm.comments.value}`;
 
-    form.reset();
+    contactForm.reset();
 
 }
 }
